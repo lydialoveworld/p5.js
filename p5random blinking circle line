@@ -1,0 +1,23 @@
+var p5random =[];
+
+
+function setup() {
+  createCanvas(1000,500);
+	for (var i=0; i<100; i++){
+		p5random [i]=random(0,100);
+	}
+}
+
+
+function draw() {
+  background(10);
+	noStroke();
+	
+	for (var i=0; i<p5random.length; i++){
+	var rnd = random(0,100);
+	var a = map(rnd,0,100,0,205);
+	var x = 20 + i*50;
+	fill(230,a);
+	ellipse(x,height/2,30,30);
+	}
+}
